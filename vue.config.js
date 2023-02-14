@@ -22,7 +22,7 @@ module.exports = {
     disableHostCheck: true,
     proxy: {
       '/api': {
-        target: 'http://api-dev.imetapro.net',
+        target: '',
         changeOrigin: true,
         pathRewrite: {
           '^/api': '/'
