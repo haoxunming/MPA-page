@@ -22,7 +22,7 @@ npm run lint
 
 ### Deployment command
 ```
-# 创建新模版（无需手动新建多页面）
+# 终端执行此命令创建新页面（无需手动新建多页面）
 npm run new:page
 ```
 ### Customize configuration
