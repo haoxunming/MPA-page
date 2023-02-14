@@ -1,0 +1,56 @@
+$pixelBase: 36; //720/2/10
+
+html {
+  font-size: #{$pixelBase}px;
+}
+
+@function parseInt($n) {
+  //  /* 去掉单位 13px -> 13 */
+  @return $n / ($n * 0 + 1);
+}
+
+@function rem($values) {
+  $list: (); // 存储转变后的值
+
+  @each $value in $values {
+    // 遍历传入的值
+
+    @if $value==auto or parseInt($value)==0 {
+      // 0 和 auto 原样返回
+      $list: append($list, $value);
+    }
+
+    @else {
+      $unit: unit($value); //取单位
+      $val: parseInt($value); // 取数字值
+
+      @if $unit=="px" {
+        //转换px值
+        $list: append($list, $val / $pixelBase+rem);
+      }
+
+      @if $unit=="rem" {
+        // rem值不转换
+        $list: append($list, $value);
+      }
+    }
+  }
+
+  @return $list; // 返回值列表
+}
+
+@mixin popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 12000;
+  overflow: hidden;
+}
+@mixin bgImage($url) {
+	background-image: url($url);
+	background-size: 100% 100%;
+}
+

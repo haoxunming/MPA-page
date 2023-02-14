@@ -1,0 +1,57 @@
+{
+  "name": "TT",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:test": "vue-cli-service build --mode test",
+    "build:pre": "vue-cli-service build --mode pre",
+    "lint": "vue-cli-service --fix lint",
+    "new:page": "node ./script/generateFile"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "chalk": "^5.0.0",
+    "colors-console": "^1.0.3",
+    "core-js": "^3.6.5",
+    "glob": "^7.2.0",
+    "mitt": "^3.0.0",
+    "sass": "^1.49.7",
+    "swiper": "^8.1.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "vconsole": "^3.9.5",
+    "vue": "^3.0.0",
+    "vue-class-component": "^8.0.0-0",
+    "vue-i18n": "^9.2.0-beta.35"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-typescript": "^10.0.0",
+    "eslint": "^8.9.0",
+    "eslint-plugin-vue": "^8.4.1",
+    "sass-loader": "^8.0.2",
+    "typescript": "~4.1.5"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "@vue/typescript/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {}
+  }
+}
